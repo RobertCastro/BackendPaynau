@@ -278,6 +278,15 @@ terraform destroy
 │   └── variables.tf     # Variables de Terraform
 └── README.md
 ```
+## Ejecución local
+
+### Dar permisos de ejecución al script
+- `chmod +x start-local.sh`
+### Ejecutar el entorno
+- `./start-local.sh `
+### Probar API
+- `http://localhost:8000/docs `
+
 
 ## Variables de Entorno
 

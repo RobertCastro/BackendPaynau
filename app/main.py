@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI(
-    description="FastAPI server that runs on top of Lambda Functions.",
+    description="FastAPI server that runs on top of Lambda Functions",
     contact={"Robert Castro": "hola@soyrobert.co"},
     title="FastAPI Backend",
     version="1.0.0",
