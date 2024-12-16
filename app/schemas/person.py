@@ -20,4 +20,4 @@ class PersonResponse(PersonBase):
     updated_at: datetime
 
     class Config:
-        from_attributes = True  # Antes era orm_mode = True
+        from_attributes = True
