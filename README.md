@@ -112,6 +112,155 @@ terraform apply
 ```bash
 terraform destroy
 ```
+## Collection Postman
+
+<details>
+  <summary>Ver collection postman</summary>
+
+  {
+	"info": {
+		"_postman_id": "861b898c-7188-4fd1-bafc-52caab327512",
+		"name": "Paynau AWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1304821"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{paynau_host_aws}}",
+					"host": [
+						"{{paynau_host_aws}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{paynau_host_aws}}/api/v1/people/1",
+					"host": [
+						"{{paynau_host_aws}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Mariana Lopez\",\r\n  \"email\": \"mariana@gmail.com\",\r\n  \"phone_number\": \"5232340925\",\r\n  \"birth_date\": \"1639673857\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{paynau_host_aws}}/api/v1/people/",
+					"host": [
+						"{{paynau_host_aws}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"people",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{paynau_host_aws}}/api/v1/people/",
+					"host": [
+						"{{paynau_host_aws}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"people",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Maria Bravo\",\r\n  \"email\": \"maria@gmail.com\",\r\n  \"phone_number\": \"405321445\",\r\n  \"birth_date\": \"1450285057\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{paynau_host_aws}}/api/v1/people/1",
+					"host": [
+						"{{paynau_host_aws}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{paynau_host_aws}}/api/v1/people/1",
+					"host": [
+						"{{paynau_host_aws}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
+
+</details>
 
 ## Estructura del Proyecto
 
