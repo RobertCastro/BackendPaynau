@@ -4,3 +4,4 @@ mangum~=0.17.0
 sqlalchemy[asyncio]~=2.0.23
 aiomysql~=0.2.0
 email-validator
+cryptography
