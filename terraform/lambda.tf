@@ -162,13 +162,7 @@ resource "aws_lambda_function" "lambda" {
 resource "aws_api_gateway_rest_api" "lambda_api" {
   name = "${var.main_resources_name}-api-${var.environment}"
 
-  binary_media_types = [
-    "multipart/form-data",
-    "application/json",
-    "application/octet-stream",
-    "text/html",
-    "*/*"
-  ]
+  binary_media_types = ["*/*"]
 }
 
 # Método OPTIONS para el proxy
@@ -323,10 +317,7 @@ resource "aws_api_gateway_gateway_response" "cors" {
   response_parameters = {
     "gatewayresponse.header.Access-Control-Allow-Origin"  = "'*'"
     "gatewayresponse.header.Access-Control-Allow-Headers" = "'*'"
-    "gatewayresponse.header.Access-Control-Allow-Methods" = "'OPTIONS,GET,POST,PUT,DELETE,PATCH,HEAD'"
-    "gatewayresponse.header.Access-Control-Expose-Headers" = "'*'"
-    "gatewayresponse.header.Access-Control-Max-Age" = "'3600'"
-    "gatewayresponse.header.Access-Control-Allow-Credentials" = "'true'"
+    "gatewayresponse.header.Access-Control-Allow-Methods" = "'*'"
   }
 }
 
