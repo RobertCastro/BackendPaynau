@@ -47,7 +47,7 @@ resource "aws_security_group_rule" "lambda_to_rds" {
 # Subnet group for RDS
 resource "aws_db_subnet_group" "rds_subnet_group" {
   name       = "${var.main_resources_name}-subnet-group-${var.environment}"
-  subnet_ids = ["subnet-021ea598cba9335c6", "subnet-0e2bd5db18632bf60"] # Using the same subnets as Lambda
+  subnet_ids = ["subnet-021ea598cba9335c6", "subnet-0e2bd5db18632bf60"]
 
   tags = {
     Name = "${var.main_resources_name}-subnet-group-${var.environment}"
